@@ -1,5 +1,6 @@
 import pygame
 
+from codeProject.Const import WIDTH, HEIGHT
 from codeProject.Menu import Menu
 
 
@@ -7,18 +8,14 @@ class Game:
 
     def __init__(self):
         pygame.init()
-        self.window = pygame.display.set_mode(size=(600, 480))
+        self.window = pygame.display.set_mode(size=(WIDTH, HEIGHT))
 
 
-    def run (self):
+    def run(self):
         while True:
-
             menu = Menu(self.window)
             menu.run()
             pass
 
-            # Checando todos os eventos
-            #for event in pygame.event.get():
-            #   if event.type == pygame.QUIT:
-            #        pygame.quit()  # Fechando janela
-            #        quit()
+
+

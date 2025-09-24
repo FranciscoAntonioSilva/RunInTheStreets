@@ -1,0 +1,9 @@
+COLOR_PRIMARY = (200, 237, 242)
+COLOR_WHITE = (255, 255, 255)
+
+WIDTH = 600
+HEIGHT = 338
+
+MENU_OPTIONS = ("NOVO JOGO",
+                "PONTUAÇÃO",
+                "SAIR DO JOGO")
