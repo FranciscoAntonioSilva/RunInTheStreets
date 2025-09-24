@@ -27,6 +27,7 @@ class Menu:
             # Titulo do jogo e suas definições
             self.menu_info(50, "AirCombat", COLOR_PRIMARY, ((WIDTH / 2), 100))
 
+            # Definindo as informações do menu com um laço
             for i in range(len(MENU_OPTIONS)):
                 self.menu_info(20, MENU_OPTIONS[i], COLOR_WHITE, ((WIDTH / 2), 200 + 35 * i))
 
@@ -38,7 +39,7 @@ class Menu:
                         quit()
 
     def menu_info(self, text_size: int, text: str, color: tuple, text_align: tuple):
-        text_font: Font = pygame.font.SysFont("arial, sans-serif", size=text_size)
+        text_font: Font = pygame.font.SysFont("Impact, sans-serif", size=text_size)
         text_surf: Surface = text_font.render(text, True, color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(center=text_align)
         self.window.blit(source=text_surf, dest=text_rect)
