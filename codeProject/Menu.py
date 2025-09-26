@@ -25,7 +25,7 @@ class Menu:
             # O blit() vai desenhar a imagem no surf e mandar para o rect
             self.window.blit(source=self.surf, dest=self.rect)
             # Titulo do jogo e suas definições
-            self.menu_info(50, "AirCombat", COLOR_WHITE, ((WIDTH / 2), 100))
+            self.menu_info(50, "AirCombat", COLOR_PRIMARY, ((WIDTH / 2), 100))
 
             # Definindo as informações do menu com um laço
             for i in range(len(MENU_OPTIONS)):
