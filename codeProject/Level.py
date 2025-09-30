@@ -18,6 +18,7 @@ class Level:
         self.name = name
         self.entity_list: list[Entity] = []
         self.entity_list.extend(EntityFactory.get_entity('nivel1-'))
+        self.entity_list.append(EntityFactory.get_entity('Player'))
         self.timeout = 20000 #20 segundos
 
 

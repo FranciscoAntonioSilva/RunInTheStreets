@@ -11,6 +11,7 @@ ENTITY_SPEED = {
     'nivel1-2': 2,
     'nivel1-3': 3,
     'nivel1-4': 4,
+    'Player': 3 #Com esse valor consigo definir a velocidade da minha nave
 }
 
 MENU_OPTIONS = ("NOVO JOGO",
