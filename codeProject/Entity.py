@@ -2,6 +2,8 @@ from abc import ABC, abstractmethod
 
 import pygame.image
 
+from codeProject.Const import ENTITY_LIFE
+
 
 class Entity(ABC):
     def __init__(self, name: str, position: tuple):
@@ -9,6 +11,7 @@ class Entity(ABC):
         self.surf = pygame.image.load('./assets/' + name + '.png').convert_alpha()
         self.rect = self.surf.get_rect(left=position[0], top=position[1])
         self.speed = 0
+        self.life = ENTITY_LIFE[self.name] #Esse trecho trata da questão da vida
 
     @abstractmethod
     def move(self):
