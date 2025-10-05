@@ -5,7 +5,7 @@ import pygame
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from codeProject.Const import COLOR_WHITE, WIDTH, HEIGHT, ENEMY_EVENT
+from codeProject.Const import COLOR_WHITE, WIDTH, HEIGHT, ENEMY_EVENT, COLOR_GREEN, COLOR_YELLOW
 from codeProject.Enemy import Enemy
 from codeProject.Entity import Entity
 from codeProject.EntityFactory import EntityFactory
@@ -40,6 +40,11 @@ class Level:
                     shoot = ent.shoot()#Observação
                     if shoot is not None:
                         self.entity_list.append(shoot)
+                if ent.name == 'Player':
+                    self.level_text(14, f'Jogador-Vida:{ent.life}', COLOR_GREEN, (10, 20))
+                    self.level_text(14, f'Pontuação:{ent.pontuacao}', COLOR_YELLOW, (10, 30))
+
+
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -48,7 +53,7 @@ class Level:
                     choice = random.choice(('Enemy1', 'Enemy2'))
                     self.entity_list.append(EntityFactory.get_entity(choice))
 
-
+            #Texto da tela
             self.level_text(14, f'{self.name} - Timeout: {self.timeout / 100: 1f}s', COLOR_WHITE, (10, 5))
             self.level_text(14, f'fps: {clock.get_fps() : .0f}', COLOR_WHITE, (10, HEIGHT - 35))
             self.level_text(14, f'entidades: {len(self.entity_list)}', COLOR_WHITE, (10, HEIGHT - 20))
