@@ -12,12 +12,21 @@ HEIGHT = 324
 
 ENEMY_EVENT = pygame.USEREVENT + 1
 
+TIMEOUT_EVENT = pygame.USEREVENT + 2
+
 ENTITY_SPEED = {
     'nivel1-0': 0,
     'nivel1-1': 1,
     'nivel1-2': 2,
     'nivel1-3': 3,
     'nivel1-4': 4,
+    'nivel2-0': 0,
+    'nivel2-1': 1,
+    'nivel2-2': 2,
+    'nivel2-3': 3,
+    'nivel2-4': 4,
+    'nivel2-5': 5,
+    'nivel2-6': 6,
     'Player': 3,#Com esse valor consigo definir a velocidade da minha nave
     'PlayerShot': 1,
     'Enemy1': 2, #Velocida do inimigo 1
@@ -32,6 +41,13 @@ ENTITY_LIFE = {
     'nivel1-2': 999,
     'nivel1-3': 999,
     'nivel1-4': 999,
+    'nivel2-0': 999,
+    'nivel2-1': 999,
+    'nivel2-2': 999,
+    'nivel2-3': 999,
+    'nivel2-4': 999,
+    'nivel2-5': 999,
+    'nivel2-6': 999,
     'Player': 300,
     'PlayerShot': 1,
     'Enemy1': 80,
@@ -52,6 +68,13 @@ ENTITY_DAMAGE = {
     'nivel1-2': 0,
     'nivel1-3': 0,
     'nivel1-4': 0,
+    'nivel2-0': 0,
+    'nivel2-1': 0,
+    'nivel2-2': 0,
+    'nivel2-3': 0,
+    'nivel2-4': 0,
+    'nivel2-5': 0,
+    'nivel2-6': 0,
     'Player': 1,
     'PlayerShot': 25,
     'Enemy1': 1,
@@ -66,6 +89,13 @@ ENTITY_SCORE = {
     'nivel1-2': 0,
     'nivel1-3': 0,
     'nivel1-4': 0,
+    'nivel2-0': 0,
+    'nivel2-1': 0,
+    'nivel2-2': 0,
+    'nivel2-3': 0,
+    'nivel2-4': 0,
+    'nivel2-5': 0,
+    'nivel2-6': 0,
     'Player': 0,
     'PlayerShot': 0,
     'Enemy1': 100,
