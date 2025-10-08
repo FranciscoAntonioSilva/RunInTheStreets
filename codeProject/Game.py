@@ -3,6 +3,7 @@ import pygame
 from codeProject.Const import WIDTH, HEIGHT, MENU_OPTIONS
 from codeProject.Level import Level
 from codeProject.Menu import Menu
+from codeProject.Score import Score
 
 
 class Game:
@@ -14,6 +15,7 @@ class Game:
 
     def run(self):
         while True:
+            score = Score(self.window)
             menu = Menu(self.window)
             menu_return = menu.run()
 
@@ -27,12 +29,23 @@ class Game:
                     level = Level(self.window, 'nivel2-', menu_return, player_pontuacao)
                     level_return = level.run(player_pontuacao)
 
+                    if level_return:
+                        level = Level(self.window, 'nivel3-', menu_return, player_pontuacao)
+                        level_return = level.run(player_pontuacao)
+
+                        if level_return:
+                            level = Level(self.window, 'nivel4-', menu_return, player_pontuacao)
+                            level_return = level.run(player_pontuacao)
+
+                            if level_return:
+                                score.save_score(menu_return, player_pontuacao)
+
                     #Fazer amanhã a implementação da fase 3 e 4
 
-                    #if level_return:
-                        #level = Level(self.window, 'Fase 3')
-                        #level_return = level.run()
+                    #
 
+            elif menu_return == MENU_OPTIONS[1]:
+                score.show_score()
 
             elif menu_return == MENU_OPTIONS[2]:
                 pygame.quit()

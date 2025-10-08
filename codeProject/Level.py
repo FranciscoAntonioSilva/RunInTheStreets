@@ -25,8 +25,8 @@ class Level:
         player = EntityFactory.get_entity('Player')
         player.score = player_pontuacao[0]
         self.entity_list.append(player)
-        self.timeout = 20000 #20 segundos
-        pygame.time.set_timer(ENEMY_EVENT, 5000) #Tempo de spawn dos inimigos
+        self.timeout = 10000 #20 segundos duração da fase
+        pygame.time.set_timer(ENEMY_EVENT, 4000) #Tempo de spawn dos inimigos
         pygame.time.set_timer(TIMEOUT_EVENT, 100) #A cada 100 milisegundos quero checar a condição de vitória
 
 
