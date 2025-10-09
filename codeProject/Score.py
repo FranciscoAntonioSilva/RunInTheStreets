@@ -11,7 +11,6 @@ from codeProject.DBProxy import DBProxy
 
 class Score:
 
-
     def __init__(self, window: Surface):
         self.window = window
         self.surf = pygame.image.load('./assets/Score.png').convert_alpha()
@@ -27,9 +26,10 @@ class Score:
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
             self.score_text(48, 'YOU WIN!', COLOR_YELLOW, SCORE_POS['Title'])
+            score = player_pontuacao[0]
+            text = 'Player entre com seu nome (4 caracteres): '
             if menu_return == MENU_OPTIONS[0]:
                 score = player_pontuacao[0]
-                text = 'Player entre com seu nome (4 caracteres): '
             self.score_text(20, text, COLOR_WHITE, SCORE_POS['EnterName'])
 
             for event in pygame.event.get():
@@ -75,14 +75,11 @@ class Score:
                         return
             pygame.display.flip()
 
-
-
     def score_text(self, text_size: int, text: str, text_color: tuple, text_pos: tuple):
         text_font: Font = pygame.font.SysFont(name='Lucida Sans Typerwriter', size= text_size)
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(center=text_pos)
         self.window.blit(source=text_surf, dest= text_rect)
-
 
 def get_formatted_date():
     current_datetime = datetime.datetime.now()

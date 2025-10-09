@@ -13,36 +13,33 @@ class EntityFactory:
         match entity_name:
             case "nivel1-":
                 list_bg = []
-                for i in range(5): #Número de imagens do level1
+                for i in range(5):
                     list_bg.append(Background(f'nivel1-{i}', (0, 0)))
                     list_bg.append(Background(f'nivel1-{i}', (WIDTH, 0)))
                 return list_bg
             case "nivel2-":
                 list_bg = []
-                for i in range(7): #Número de imagens do level2
+                for i in range(7):
                     list_bg.append(Background(f'nivel2-{i}', (0, 0)))
                     list_bg.append(Background(f'nivel2-{i}', (WIDTH, 0)))
                 return list_bg
             case "nivel3-":
                 list_bg = []
-                for i in range(6):  # Número de imagens do level2
+                for i in range(6):
                     list_bg.append(Background(f'nivel3-{i}', (0, 0)))
                     list_bg.append(Background(f'nivel3-{i}', (WIDTH, 0)))
                 return list_bg
             case "nivel4-":
                 list_bg = []
-                for i in range(6):  # Número de imagens do level2
+                for i in range(6):
                     list_bg.append(Background(f'nivel4-{i}', (0, 0)))
                     list_bg.append(Background(f'nivel4-{i}', (WIDTH, 0)))
                 return list_bg
             case "Player":
                 return Player('Player', (10, HEIGHT / 2))
-                # return [Player('Player', (10, HEIGHT / 2))]
             case "Enemy1":
                 return Enemy('Enemy1', (WIDTH + 20, random.randint(20, HEIGHT - 20)))
-                # return [Enemy('Enemy1', (WIDTH + 20, random.randint(20, HEIGHT - 20)))]
             case "Enemy2":
                 return Enemy('Enemy2', (WIDTH + 20, random.randint(20, HEIGHT - 20)))
-                # return [Enemy('Enemy2', (WIDTH + 20, random.randint(20, HEIGHT - 20)))]
         return None
 

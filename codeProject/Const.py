@@ -5,7 +5,7 @@ COLOR_PRIMARY = (200, 237, 242)
 COLOR_WHITE = (255, 255, 255)
 COLOR_BLUE = (0, 0, 255)
 COLOR_GREEN = (0, 255, 0)
-COLOR_YELLOW =  (255, 255, 0) #Pode ser que eu mude essa variável para vermelho
+COLOR_YELLOW =  (255, 255, 0)
 
 WIDTH = 570
 HEIGHT = 324
@@ -41,12 +41,12 @@ ENTITY_SPEED = {
     'nivel4-5': 5,
     'nivel4-6': 6,
     'nivel4-7': 7,
-    'Player': 3,#Com esse valor consigo definir a velocidade da minha nave
+    'Player': 3,
     'PlayerShot': 1,
-    'Enemy1': 2, #Velocida do inimigo 1
-    'Enemy1Shot': 5, #Disparo do inimigo 1
-    'Enemy2': 1, #Velocidade do inimigo 2
-    'Enemy2Shot': 2 #Disparo do inimigo 2
+    'Enemy1': 2,
+    'Enemy1Shot': 5,
+    'Enemy2': 1,
+    'Enemy2Shot': 2
 }
 
 ENTITY_LIFE = {
@@ -78,9 +78,9 @@ ENTITY_LIFE = {
     'nivel4-7': 999,
     'Player': 300,
     'PlayerShot': 1,
-    'Enemy1': 80,
+    'Enemy1': 120,
     'Enemy1Shot': 1,
-    'Enemy2': 120,
+    'Enemy2': 160,
     'Enemy2Shot': 1
 }
 

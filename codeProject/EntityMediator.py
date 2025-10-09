@@ -24,7 +24,6 @@ class EntityMediator:
     @staticmethod
     def __verify_collision_entity(ent1, ent2):
         valid_collision = False
-        #Talvez precise mudar a partir do segundo if para elif
         if isinstance(ent1, Enemy) and isinstance(ent2, PlayerFire):
             valid_collision = True
         if isinstance(ent1, PlayerFire) and isinstance(ent2, Enemy):
@@ -33,15 +32,13 @@ class EntityMediator:
             valid_collision = True
         if isinstance(ent1, EnemyFire) and isinstance(ent2, Player):
             valid_collision = True
-    #Validação das colisões
         if valid_collision:
             if (ent1.rect.right >= ent2.rect.left and ent1.rect.left <= ent2.rect.right and
                 ent1.rect.bottom >= ent2.rect.top and ent1.rect.top <= ent2.rect.bottom):
-                ent1.life -= ent2.dano #No exemplo do professor vai estar como damage
+                ent1.life -= ent2.dano
                 ent2.life -= ent1.dano
                 ent1.last_dano = ent2.name
                 ent2.last_dano = ent1.name
-
 
     @staticmethod
     def verify_collision(entity_list: list[Entity]):
@@ -53,13 +50,11 @@ class EntityMediator:
                 EntityMediator.__verify_collision_entity(entity1, entity2)
 
     @staticmethod
-    def mark_score(enemy: Enemy, entity_list: list[Entity]): #No exemplo do professor estar como give_score
+    def mark_score(enemy: Enemy, entity_list: list[Entity]):
         if enemy.last_dano == 'PlayerShot':
             for ent in entity_list:
                 if ent.name == 'Player':
                     ent.pontuacao += enemy.pontuacao
-
-
 
     @staticmethod
     def verify_life(entity_list: list[Entity]):

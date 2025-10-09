@@ -11,9 +11,9 @@ class Entity(ABC):
         self.surf = pygame.image.load('./assets/' + name + '.png').convert_alpha()
         self.rect = self.surf.get_rect(left=position[0], top=position[1])
         self.speed = 0
-        self.life = ENTITY_LIFE[self.name] #Esse trecho trata da questão da vida
+        self.life = ENTITY_LIFE[self.name]
         self.dano = ENTITY_DAMAGE[self.name]
-        self.pontuacao = ENTITY_SCORE[self.name] #Esse trecho no exemplo do professor está como score
+        self.pontuacao = ENTITY_SCORE[self.name]
         self.last_dano = 'None'
 
     @abstractmethod
