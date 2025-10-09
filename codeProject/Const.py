@@ -76,7 +76,7 @@ ENTITY_LIFE = {
     'nivel4-5': 999,
     'nivel4-6': 999,
     'nivel4-7': 999,
-    'Player': 300,
+    'Player': 200,
     'PlayerShot': 1,
     'Enemy1': 120,
     'Enemy1Shot': 1,
